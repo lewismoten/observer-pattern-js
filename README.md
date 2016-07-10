@@ -6,7 +6,7 @@ An implementation of the subject in an Observer Design Pattern.
 
 ```javascript
 let Observable = require('observer-subject'),
-  subject,
+  subject = new Observable(),
   observer1 = {
     notify(event, ...args) {
 
@@ -25,17 +25,6 @@ let Observable = require('observer-subject'),
 
   };
 
-class Emitter extends Observable {
-
-  changed(newValue) {
-
-    this.notifyObservers('onChange', newValue);
-
-  }
-
-}
-
-subject = new Emitter();
 subject.registerObserver(observer1);
 subject.registerObserver(observer2);
 subject.changed(42);

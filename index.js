@@ -9,14 +9,6 @@
 
     constructor() {
 
-      if (new.target === Observable) {
-
-        throw new TypeError(
-          `Cannot instantiate abstract class: ${this.constructor.name}`
-        );
-
-      }
-
       this[observers] = new Map();
 
     }
