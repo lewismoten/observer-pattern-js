@@ -35,14 +35,13 @@
 
     });
 
-    it('Can not register the same observer twice', () => {
+    it('Can register the same observer twice', () => {
 
       let emitter = new Emitter(),
-        observer = {notify: () => {}},
-        message = 'Duplicate observer: Object';
+        observer = {notify: () => {}};
 
       expect(() => emitter.registerObserver(observer)).not.toThrow();
-      expect(() => emitter.registerObserver(observer)).toThrow(message);
+      expect(() => emitter.registerObserver(observer)).not.toThrow();
 
     });
 

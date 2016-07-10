@@ -31,14 +31,6 @@
 
       }
 
-      if (this[observers].has(observer)) {
-
-        throw new TypeError(
-          `Duplicate observer: ${observer.constructor.name}`
-        );
-
-      }
-
       this[observers].set(observer, observer);
 
     }

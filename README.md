@@ -63,7 +63,6 @@ Will start notifying the observer.
 | --- | --- | --- | --- |
 | parameter | object | observer | The object to be notified. |
 | throws | Type Exception | n/a | Will throw an error if observer does not have a function named `notify`. |
-| throws | Type Exception | n/a | Will throw an error if observer is already registered. |
 
 ### .unregisterObserver(observer)
 
