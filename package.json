@@ -7,5 +7,25 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lewis Edward Moten III",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [
+    "design pattern",
+    "observer pattern",
+    "observable",
+    "software design pattern",
+    "subject",
+    "dependents",
+    "observers",
+    "notify",
+    "event handling",
+    "mvc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewismoten/observer-pattern-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lewismoten/observer-pattern-js/issues"
+  },
+  "homepage": "https://github.com/lewismoten/observer-pattern-js#readme"
 }
