@@ -1,6 +1,6 @@
 {
   "name": "observer-subject",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The subject in the Observer Design Pattern",
   "main": "index.js",
   "scripts": {
