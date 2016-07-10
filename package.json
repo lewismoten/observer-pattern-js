@@ -1,7 +1,7 @@
 {
-  "name": "observer-pattern-js",
+  "name": "observer-subject",
   "version": "1.0.0",
-  "description": "Observer Design Pattern",
+  "description": "The subject in the Observer Design Pattern",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,10 +22,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lewismoten/observer-pattern-js.git"
+    "url": "git+https://github.com/lewismoten/observer-subject-js.git"
   },
   "bugs": {
-    "url": "https://github.com/lewismoten/observer-pattern-js/issues"
+    "url": "https://github.com/lewismoten/observer-subject-js/issues"
   },
-  "homepage": "https://github.com/lewismoten/observer-pattern-js#readme"
+  "homepage": "https://github.com/lewismoten/observer-subject-js#readme"
 }
