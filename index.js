@@ -2,7 +2,8 @@
 
   'use strict';
 
-  let observers = Symbol('observers');
+  let isFunction = require('is-function'),
+    observers = Symbol('observers');
 
   module.exports = class Observable {
 
@@ -22,7 +23,7 @@
 
     registerObserver(observer) {
 
-      if (typeof observer.notify !== 'function') {
+      if (!isFunction(observer.notify)) {
 
         throw new TypeError(
           `${observer.constructor.name}.notify is not a function`

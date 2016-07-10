@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/lewismoten/observer-subject-js/issues"
   },
-  "homepage": "https://github.com/lewismoten/observer-subject-js#readme"
+  "homepage": "https://github.com/lewismoten/observer-subject-js#readme",
+  "dependencies": {
+    "is-function": "^1.0.1"
+  }
 }
