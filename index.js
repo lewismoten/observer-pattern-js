@@ -23,7 +23,7 @@
 
       }
 
-      this[observers].set(observer, observer);
+      this[observers].set(observer, 0);
 
     }
 
@@ -35,7 +35,7 @@
 
     notifyObservers(...args) {
 
-      this[observers].forEach(observer => observer.notify(...args));
+      this[observers].forEach((v, observer) => observer.notify(...args));
 
     }
 
