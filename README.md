@@ -8,18 +8,18 @@ An implementation of the subject in an Observer Design Pattern.
 let Observable = require('observer-subject'),
   subject = new Observable(),
   observer1 = {
-    notify(event, ...args) {
+    notify(...args) {
 
-      console.log(`#1 - The event ${event} provided:`, ...args);
+      console.log(`#1`, ...args);
 
     }
 
   },
   observer2 = {
 
-    notify(event, ...args) {
+    notify(...args) {
 
-      console.log(`#2 - The event ${event} provided:`, ...args);
+      console.log(`#2`, ...args);
 
     }
 
@@ -27,13 +27,13 @@ let Observable = require('observer-subject'),
 
 subject.registerObserver(observer1);
 subject.registerObserver(observer2);
-subject.changed(42);
-// #1 - The event onChange provided: 42
-// #2 - The event onChange provided: 42
+subject.notifyObservers(42);
+// #1 42
+// #2 42
 
 subject.unregisterObserver(observer1);
-subject.changed(32);
-// #2 - The event onChange provided: 32
+subject.notifyObservers(32);
+// #2 32
 ```
 ## Installation
 ```
