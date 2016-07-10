@@ -17,7 +17,7 @@
 
       }
 
-      this[observers] = [];
+      this[observers] = new Map();
 
     }
 
@@ -31,7 +31,7 @@
 
       }
 
-      if (this[observers].indexOf(observer) !== -1) {
+      if (this[observers].has(observer)) {
 
         throw new TypeError(
           `Duplicate observer: ${observer.constructor.name}`
@@ -39,23 +39,13 @@
 
       }
 
-      this[observers].push(observer);
+      this[observers].set(observer, observer);
 
     }
 
     unregisterObserver(observer) {
 
-      let index = this[observers].indexOf(observer);
-
-      if (index === -1) {
-
-        return false;
-
-      }
-
-      this[observers].splice(index, 1);
-
-      return true;
+      return this[observers].delete(observer);
 
     }
 
@@ -66,6 +56,5 @@
     }
 
   };
-
 
 })();
