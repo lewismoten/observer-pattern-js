@@ -30,6 +30,14 @@
 
       }
 
+      if (this[observers].indexOf(observer) !== -1) {
+
+        throw new TypeError(
+          `Duplicate observer: ${observer.constructor.name}`
+        );
+
+      }
+
       this[observers].push(observer);
 
     }
@@ -44,7 +52,7 @@
 
       }
 
-      this[observers] = this[observers].splice(index, 1);
+      this[observers].splice(index, 1);
 
       return true;
 
